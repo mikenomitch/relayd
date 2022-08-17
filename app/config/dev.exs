@@ -26,7 +26,12 @@ config :relayd, RelaydWeb.Endpoint,
   secret_key_base: "eF6v7qoJ65lAXkMYO5hwquTJMntgq4hP1sSVrP6nAy4274oYVhbVOYClgMn6ehn8",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    sass: {
+      DartSass,
+      :install_and_run,
+      [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
+    }
   ]
 
 # ## SSL Support
