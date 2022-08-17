@@ -50,7 +50,7 @@ defmodule Relayd.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:dart_sass, "~> 0.5", only: :dev}
+      {:tailwind, "~> 0.1", runtime: Mix.env() == :dev}
     ]
   end
 
@@ -68,7 +68,7 @@ defmodule Relayd.MixProject do
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.deploy": [
         "esbuild default --minify",
-        "sass default --no-source-map --style=compressed",
+        "tailwind default --minify",
         "phx.digest"
       ]
     ]
