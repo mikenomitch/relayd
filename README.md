@@ -6,14 +6,12 @@ Relayd is an open source link sharing app made for private groups.
 
 ### General
 
-- Add styling framework
-- Add basic landing page & auth
 - Add open api & docs page
 - Add API auth
 - Create site admin (+ put dashboard behind it)
 - Add linting & auto-formatting
   - Backend
-  - Frontent
+  - Frontend
 - Get emails working
 - Create groups as example type
   - Group-user association

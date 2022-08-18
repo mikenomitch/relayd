@@ -1,0 +1,2 @@
+echo === BUILD APP IMAGE ===
+docker build -t mnomitch/relayd  -f ./ops/docker/app.dockerfile ./app

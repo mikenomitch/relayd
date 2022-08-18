@@ -1,0 +1,1 @@
+cd app && iex -S mix phx.server
