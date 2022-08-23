@@ -12,16 +12,16 @@ Relayd is an open source link sharing app made for private groups.
   - Group-user association
   - Groups LiveView
   - Groups API
+- Create site admin (+ put dashboard behind it)
 - Add OpenApi & interactive docs page
 - Add API auth
-- Create site admin (+ put dashboard behind it)
 - Get emails working
-- Add example React drop in
+- Add example React drop in (cmd-k?) w Typescript
 - Add icons (https://heroicons.com)
 
 ### Ops
 
-- Run via Docker
+- Write libcluster_nomad plugin
 - Add CI to GH
   - Linting
   - Test
@@ -29,10 +29,11 @@ Relayd is an open source link sharing app made for private groups.
   - CI Deployment
 - Add Nomad Pack
   - Nomad Pack CI
-- Write libcluster_nomad plugin
 - Write caddy nomad plugin
 
 ### App-Specific
+
+- Add landing page with lorem ipsum
 
 - Create groups
 - Create posts (link, discussion, media)
@@ -42,5 +43,3 @@ Relayd is an open source link sharing app made for private groups.
 - Create group admin prilidges
 - Create pseudo-groups
 - Email notifications & notification settings
-
-- Add landing page with lorem ipsum
