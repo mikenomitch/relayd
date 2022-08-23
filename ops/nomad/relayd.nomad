@@ -1,8 +1,8 @@
-job "relayd" {
+job "relayd-b" {
   datacenters = ["us-east-1"]
 
   group "phoenix" {
-    count = 1
+    count = 2
 
     network {
       port "http" {

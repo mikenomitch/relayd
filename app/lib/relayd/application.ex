@@ -12,11 +12,10 @@ defmodule Relayd.Application do
         strategy: Cluster.Strategy.Nomad,
         config: [
           service_name: "relayd",
-          nomad_server_url:
-            "http://nomad-stack-nomad-servers-240141791.us-east-1.elb.amazonaws.com",
+          nomad_server_url: "http://127.0.0.1:4646",
           namespace: "default",
           node_basename: "relayd",
-          token: "715dcc8f-33db-35d6-b7d4-f9c70b3c3cf8",
+          token: "4649b287-1213-6080-8b77-f115f5b4e8e0",
           polling_interval: 5_000
         ]
       ]
