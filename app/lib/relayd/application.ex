@@ -12,10 +12,10 @@ defmodule Relayd.Application do
         strategy: Cluster.Strategy.Nomad,
         config: [
           service_name: "relayd",
-          nomad_server_url: "http://127.0.0.1:4646",
+          nomad_server_url: System.get_env("NOMAD_SERVER_ADDR"),
           namespace: "default",
           node_basename: "relayd",
-          token: "4649b287-1213-6080-8b77-f115f5b4e8e0",
+          token: System.get_env("NOMAD_TOKEN"),
           polling_interval: 5_000
         ]
       ]

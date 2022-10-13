@@ -27,7 +27,7 @@ job "relayd" {
       driver = "docker"
 
       config {
-        image = "mnomitch/relayd"
+        image = "mnomitch/relayd:main"
         ports = ["https", "epmd"]
       }
 
