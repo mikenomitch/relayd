@@ -1,11 +1,11 @@
-job "relayd-b" {
+job "relayd" {
   datacenters = ["us-east-1"]
 
-  group "phoenix" {
+  group "app" {
     count = 2
 
     network {
-      port "http" {
+      port "https" {
         static = 4000
         to     = 4000
       }
@@ -19,7 +19,7 @@ job "relayd-b" {
     service {
       name     = "relayd"
       provider = "nomad"
-      port     = "http"
+      port     = "https"
       address  = "${attr.unique.platform.aws.public-ipv4}"
     }
 
@@ -28,11 +28,11 @@ job "relayd-b" {
 
       config {
         image = "mnomitch/relayd"
-        ports = ["http", "epmd"]
+        ports = ["https", "epmd"]
       }
 
       env {
-        PORT            = "${NOMAD_PORT_http}"
+        PORT            = "${NOMAD_PORT_https}"
         DATABASE_URL    = "postgresql://postgres:postgres@host.docker.internal/relayd_dev"
         SECRET_KEY_BASE = "9bhPzyt2a7QLFKecq0o8YTlKtpMk77Q4Sg1FxOZzGCao/+HZ4Eos637DGK0M4m2K"
       }
