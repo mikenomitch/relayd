@@ -12,7 +12,7 @@ defmodule Relayd.Application do
         strategy: Cluster.Strategy.Nomad,
         config: [
           service_name: "relayd",
-          nomad_server_url: System.get_env("NOMAD_SERVER_ADDR"),
+          nomad_server_url: System.get_env("NOMAD_ADDR"),
           namespace: "default",
           node_basename: "relayd",
           token: System.get_env("NOMAD_TOKEN"),

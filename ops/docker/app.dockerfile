@@ -54,6 +54,8 @@ RUN mix compile
 # copy runtime configuration file
 COPY config/runtime.exs config/
 
+EXPOSE 443
 EXPOSE 4000
+EXPOSE 4369
 
 CMD ["mix", "phx.server"]
