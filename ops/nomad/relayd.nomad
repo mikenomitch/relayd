@@ -14,6 +14,11 @@ job "relayd" {
         static = 4369
         to     = 4369
       }
+
+      port "erlang" {
+        static = 9001
+        to     = 9001
+      }
     }
 
     service {
@@ -35,7 +40,7 @@ job "relayd" {
 
       config {
         image = "mnomitch/relayd:0.0.3"
-        ports = ["http", "epmd"]
+        ports = ["http", "epmd", "erlang"]
 
         command = "elixir"
         args = [
