@@ -57,5 +57,6 @@ COPY config/runtime.exs config/
 EXPOSE 443
 EXPOSE 4000
 EXPOSE 4369
+EXPOSE 9001
 
 CMD ["mix", "phx.server"]
