@@ -39,8 +39,9 @@ job "relayd" {
       driver = "docker"
 
       config {
-        image = "mnomitch/relayd:0.0.2"
-        ports = ["http", "epmd"]
+        image   = "mnomitch/relayd:0.0.2"
+        ports   = ["http", "epmd"]
+        command = "elixir --name relayd@${attr.unique.platform.aws.public-ipv4} -S mix phx.server"
       }
 
       env {
