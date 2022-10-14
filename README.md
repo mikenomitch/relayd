@@ -6,8 +6,6 @@ Relayd is an open source link sharing app made for private groups.
 
 ### General
 
-- Add linting
-  - Backend (https://github.com/rrrene/credo)
 - Create groups as example type
   - Group-user association
   - Groups LiveView
@@ -21,14 +19,13 @@ Relayd is an open source link sharing app made for private groups.
 
 ### Ops
 
-- Write libcluster_nomad plugin
 - Add CI to GH
-  - Linting
+  - Linting/Credo
   - Test
-  - Docker build
   - CI Deployment
 - Add Nomad Pack
   - Nomad Pack CI
+- Write libcluster_nomad plugin
 - Write caddy nomad plugin
 
 ### App-Specific

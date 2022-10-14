@@ -45,11 +45,9 @@ job "relayd" {
         command = "elixir"
         args = [
           "--name", "relayd@${attr.unique.platform.aws.public-ipv4}",
-          "-kernel", "inet_dist_listen_min", "9001",
-          "-kernel", "inet_dist_listen_max", "9001",
-          "-S",
-          "mix",
-          "phx.server",
+          // "--erl", "\"-kernel inet_dist_listen_min 9001 inet_dist_listen_max 9001\"",
+          "--cookie", "secure_random_string",
+          "-S", "mix", "phx.server",
         ]
       }
 

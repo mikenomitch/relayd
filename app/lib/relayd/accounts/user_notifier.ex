@@ -1,4 +1,8 @@
 defmodule Relayd.Accounts.UserNotifier do
+  @moduledoc """
+  Notifies user via Mailer
+  """
+
   import Swoosh.Email
 
   alias Relayd.Mailer

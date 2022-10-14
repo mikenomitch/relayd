@@ -1,4 +1,8 @@
 defmodule RelaydWeb.Telemetry do
+  @moduledoc """
+  Core Telemetry module. Auto-generated
+  """
+
   use Supervisor
   import Telemetry.Metrics
 
@@ -37,7 +41,8 @@ defmodule RelaydWeb.Telemetry do
       ),
       summary("relayd.repo.query.decode_time",
         unit: {:native, :millisecond},
-        description: "The time spent decoding the data received from the database"
+        description:
+          "The time spent decoding the data received from the database"
       ),
       summary("relayd.repo.query.query_time",
         unit: {:native, :millisecond},
