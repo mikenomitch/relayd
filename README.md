@@ -6,6 +6,7 @@ Relayd is an open source link sharing app made for private groups.
 
 ### General
 
+- Dialyzer
 - Create groups as example type
   - Group-user association
   - Groups LiveView
@@ -21,12 +22,11 @@ Relayd is an open source link sharing app made for private groups.
 
 - Add CI to GH
   - Linting/Credo
+  - Dialyzer
   - Test
-  - CI Deployment
-- Add Nomad Pack
-  - Nomad Pack CI
-- Write libcluster_nomad plugin
-- Write caddy nomad plugin
+  - CI deployment via Nomad Pack
+- Finish libcluster_nomad plugin (https://github.com/mikenomitch/libcluster)
+- Finish caddy nomad plugin (https://github.com/mikenomitch/caddy-tlsnomad)
 
 ### App-Specific
 
